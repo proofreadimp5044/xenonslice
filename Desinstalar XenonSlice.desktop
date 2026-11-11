@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Desinstalar XenonSlice
+Comment=Revierte la configuración y quita XenonSlice
+Exec=bash -c 'cd ~/xenonslice && ./desinstalar-todo.sh'
+Icon=edit-delete
+Terminal=true
+Categories=System;Settings;
