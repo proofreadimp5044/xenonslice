@@ -1,0 +1,7 @@
+Si no puedes borrar __pycache__:
+
+sudo chown -R $USER:$USER ~/xenonslice
+rm -rf ~/xenonslice/src/__pycache__ ~/xenonslice/__pycache__
+
+Verificar:
+ls -la ~/xenonslice/src/
