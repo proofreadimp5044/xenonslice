@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Preparar permisos de XenonSlice
-Comment=Da permisos de ejecución a los scripts de XenonSlice
-Exec=bash -c 'cd ~/xenonslice && ./preparar.sh'
-Icon=system-file-manager
-Terminal=true
-Categories=System;Settings;

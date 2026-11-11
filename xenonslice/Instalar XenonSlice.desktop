@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Instalar XenonSlice
-Comment=Instala y configura XenonSlice en un solo paso
-Exec=bash -c 'cd ~/xenonslice && ./instalar-todo.sh'
-Icon=preferences-system-performance
-Terminal=true
-Categories=System;Settings;
