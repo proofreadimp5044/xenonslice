@@ -70,3 +70,49 @@ Debe quedar exactamente en `~/xenonslice`.
    cd ~/xenonslice
    chmod +x preparar.sh
    ./preparar.sh
+
+   ## Estado y compatibilidad
+
+> **Experimental (v0.1.0).** Funciona y está probado en el hardware y el
+> entorno que se indican abajo. En cualquier otro equipo, **no está probado**
+> y el instalador puede rechazarlo.
+
+**Probado en:**
+
+- CPU: AMD Ryzen Z1 Extreme (8c/16t, un solo dominio de caché L3).
+- Distro: CachyOS (Arch-based), systemd.
+- Escritorio: Plasma 6 (Wayland) en escritorio y **Plasma Mobile**.
+- Uso: aplicar, revertir, estado, GUI, CLI, reglas por app.
+
+**No probado** (puede funcionar, pero no lo he probado):
+
+- Otras CPUs AMD de 8c/16t de un solo chip (p. ej. 5800X3D, 5700X).
+- Otras distros (Fedora, Debian, Ubuntu…).
+- X11.
+- Otros escritorios (GNOME, XFCE…).
+
+**No soportado** (el instalador lo rechaza):
+
+- CPUs con más o menos de 16 hilos.
+- CPUs con varios dominios de caché L3 (varios chiplets: 5900X, 7900X…).
+- CPUs sin SMT.
+- Intel.
+
+Si tu equipo no está en "Probado", el instalador cancelará. Puedes forzarlo
+con `--forzar`, pero no hay garantía y puedes dejarte el sistema en un estado
+que no esperas.
+
+**Problema conocido:** en Plasma 6 + Wayland, la app puede no abrir desde el
+menú tras reiniciar Desde una terminal, `xenonslice` funciona siempre. El `.desktop` abre una terminal
+para que, si falla, veas el error.
+
+## Cómo se hizo
+
+Este proyecto se desarrolló con asistencia de IA (Claude, de Anthropic) para
+el diseño, la escritura del código y la depuración. La idea, las pruebas en
+hardware real y las decisiones de diseño son mías. La IA aceleró el proceso,
+pero el código se ha revisado, probado y corregido en un Ryzen Z1 Extreme
+con CachyOS.
+
+Si encuentras un fallo, es tan mío como de la IA: abre un issue con tu CPU,
+distro y lo que ha fallado.
